@@ -1,0 +1,21 @@
+package patten;
+//input: 286
+//output:
+//2
+//88
+//666
+
+public class pattern268 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      int n=268;
+      for(int i=1;i<n;i++) {
+    	  for(int j=i;j<i;j++) {
+    		  System.out.print(j);
+    	  }
+    	  System.out.println(" ");
+      }
+	}
+
+}
