@@ -1,0 +1,36 @@
+package atmproject;
+
+public class Atmcase {
+  public double balance;
+  public  double amount;
+  
+  public void checkbalance(double balance) {
+	  if(balance>0) {
+		  System.out.println("Total Balance:-"+balance);
+		  
+	  }
+	  else System.out.println("Not sufficent balance");
+  }
+  public void withdraw(double balance,double amount) {
+	  if(amount>0) {
+		  balance-=amount ;
+		  System.out.println("Succesfully Withdraw"+ amount );
+	  }
+	  else System.out.println("balance"+amount);
+	  
+  }
+  public void deposite(int amount,double  balnace) {
+	  if(amount>0) {
+		  balance+=amount;
+		  System.out.println("Succesfully  Deposite"+ amount );
+	  }
+  }
+  public void menu() {
+	   System.out.println("\n====== ATM Menu ======");
+      System.out.println("1. Check Balance");
+      System.out.println("2. Deposit Money");
+      System.out.println("3. Withdraw Money");
+      System.out.println("4. Exit");
+      System.out.print("Choose an option: ");
+  }
+}
