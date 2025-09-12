@@ -1,0 +1,30 @@
+package demo;
+
+import java.util.Scanner;
+
+public class StringPalindore {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Scanner sc=new Scanner(System.in); 
+     System.out.println("Enter the String");
+     String str=sc.nextLine();
+     boolean ispalindore=true;
+     for(int i=0;i<str.length()-1;i++) {
+    	 for(int j=str.length();j>0;j--) {
+    		 if(i==j) {
+    			 ispalindore=true;
+    		 }
+    		 else {
+    			 ispalindore=false;
+    		 }
+    	 }
+     }
+     if(ispalindore) {
+    	System.out.println("is palindore");
+	}
+     else {
+    	 System.out.println("is not palindore");
+     }
+	}
+}
