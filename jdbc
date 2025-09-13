@@ -1,0 +1,33 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class MYhome {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException{
+		// TODO Auto-generated method stub
+		
+        Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		String url = "jdbc:mysql://localhost:3306/demo";
+		String username = "root";
+		String password = "Kalyani@123";
+		
+		Connection c = DriverManager.getConnection(url, username, password);
+		 Statement s=c.createStatement();
+	int a=s.executeUpdate("insert into student(id,name,city) values(1,'ram','pune')");// where i insert the value into the student table 
+	
+		if(a>0) 
+			
+			System.out.println("Database connected...");
+		
+		else 
+			
+			System.out.println("Database NOT connected....");
+		}
+
+
+}
+
+
